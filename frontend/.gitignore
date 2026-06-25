@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+.venv/
+
+# Environment variables
+.env
+.env.local
+
+# Build files
+dist/
+build/
+
+# Database files
+*.db
+*.db-journal
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+.jest/
+
+# Temp files
+*.tmp
+*.temp

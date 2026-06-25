@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  color: #5C4033;
+}
+
+/* 🌈 Slow Animated Background with Light Colors */
+.animated-bg-light {
+  background: linear-gradient(-45deg, 
+    #e8f4f8,  /* Light Blue */
+    #e8f5e9,  /* Light Green */
+    #f5f0e8,  /* Light Brown/Cream */
+    #fce4ec,  /* Light Pink */
+    #fff8e1,  /* Soft Yellow */
+    #f3e5f5   /* Light Lavender */
+  );
+  background-size: 400% 400%;
+  animation: gentleRainbow 25s ease-in-out infinite;
+  min-height: 100vh;
+}
+
+@keyframes gentleRainbow {
+  0% { background-position: 0% 50%; }
+  10% { background-position: 100% 0%; }
+  20% { background-position: 100% 100%; }
+  30% { background-position: 0% 100%; }
+  40% { background-position: 0% 50%; }
+  50% { background-position: 100% 0%; }
+  60% { background-position: 100% 100%; }
+  70% { background-position: 0% 100%; }
+  80% { background-position: 0% 50%; }
+  90% { background-position: 100% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card styles */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(92, 64, 51, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(92, 64, 51, 0.10);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Glass effect */
+.glass-light {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Button styles */
+.btn-primary {
+  background: #7BAE7F;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #6a9e6e;
+  box-shadow: 0 4px 20px rgba(123, 174, 127, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #E8C872;
+  color: #5C4033;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #ddbc60;
+  box-shadow: 0 4px 20px rgba(232, 200, 114, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-brown {
+  background: #8B7355;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-brown:hover {
+  background: #7a6348;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Input styles */
+.input-field {
+  width: 100%;
+  padding: 12px 18px;
+  border: 2px solid #ede8e0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(250, 248, 245, 0.7);
+  color: #5C4033;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #8B7355;
+  box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Tag/badge styles */
+.tag-brown {
+  background: #f5f0e8;
+  color: #8B7355;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-green {
+  background: #eaf5eb;
+  color: #7BAE7F;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag-yellow {
+  background: #fcf6e6;
+  color: #b8963a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A373;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B7355;
+}
+
+/* Recording pulse */
+.pulse-recording {
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0% { box-shadow: 0 0 0 0 rgba(232, 200, 114, 0.3); }
+  50% { box-shadow: 0 0 0 16px rgba(232, 200, 114, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 200, 114, 0); }
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #ede8e0;
+  border-top: 3px solid #8B7355;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
